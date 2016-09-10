@@ -17,7 +17,7 @@ for (var i = 0; i < data.messageGroup.length; i++) {
     currentMessage = data.messageGroup[i].message;
     //below is ES6 notation
     //can be written "<h1>"+currentSong.title
-      messageData += `<p>${currentMessage}</p><br/>`;
+      messageData += `<p>${currentMessage}</p><button type="button">Delete</button><br/>`;
 
  };
 
