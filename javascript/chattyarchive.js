@@ -2,6 +2,7 @@
 // and return array of objects
 
 var Chatty = (function(){
+	// return{
 	
 	function executeThisCodeIfXHRFails () {
 	  console.log("An error occurred while transferring");
@@ -36,5 +37,5 @@ var Chatty = (function(){
 	myRequest.addEventListener("progress", executeThisCodeWhenChunksArrive)
 	myRequest.open("GET", "loadmessages.json")
 	myRequest.send();
-
+// }
 })();
