@@ -1,9 +1,10 @@
 body {
-  background: tomato;
+  font-family: Tahoma;
+  color: #ff4f00;
 }
 
 .dark {
-  background: darkblue;
+  background: darkslategray;
   color: white;
 }
 
