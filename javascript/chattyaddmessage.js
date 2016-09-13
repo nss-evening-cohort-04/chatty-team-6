@@ -7,7 +7,7 @@
 // individual messages.  
 // Messages should be stored in 
 // private array.
-
+var printTo = document.getElementById("printed-message");
 var Chatty = (function(addChatty)
 {
 	
@@ -17,19 +17,27 @@ var Chatty = (function(addChatty)
 		//this method will push 
 		//the user message into the array
 		var userMessage = document.getElementById("input-message").value;
-		messageArray.push({"message":userMessage});	
+		messageArray.unshift({"message":userMessage});	
 	};
 
 	addChatty.printMessages = function(){
 		var newMessages = "";
-		var currentMessage ="";		
+		var currentMessage ="";
+
 		for(var i =0; i < messageArray.length; i++){
 			currentMessage = messageArray[i].message;
-			newMessages += `<p>${currentMessage}</p><button type="button">Delete</button><br/>`
+			newMessages += `<div id='message-${[i]}'>`;
+	    	newMessages += `<p>${currentMessage}</p>`;
+	    	newMessages += "<button id='deleteBtn' type='button'>Delete</button><br/>";
+	    	newMessages +="</div>";
 		}
-		return newMessages;	
+		printTo.innerHTML =  newMessages;	
 	};
 
+	 printTo.addEventListener("click",function(e){
+	 	console.log("target",e.target);
+	 	Chatty.removeMessage(e.target);
+	 });
 
 return addChatty;
 })(Chatty || {});
