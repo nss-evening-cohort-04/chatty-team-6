@@ -26,7 +26,7 @@ var Chatty = (function(){
 	    //can be written "<h1>"+currentSong.title
 	    messageData += `<div id='old-message-${[i]}'>`;
 	    	messageData += `<p>${currentMessage}</p>`;
-	    	messageData += "<button id='deleteBtn' type='button'>Delete</button><br/>";
+	    	messageData += "<button id='deleteBtn' type='button' class='btn'>Delete</button><br/>";
 	    messageData +="</div>";
 
 	 };

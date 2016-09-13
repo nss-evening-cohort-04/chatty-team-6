@@ -1,7 +1,10 @@
 var mainElement = document.getElementsByTagName("body");
 
+
 function makeItDark() {
   mainElement[0].classList.toggle("dark");
+	document.getElementById("choice-dark").style.color = "darkslategray";
+	document.getElementById("choice-large").style.color = "darkslategray";  
 }
 
 var darkenThings = document.getElementById("choice-dark");
@@ -16,6 +19,7 @@ function makeItLarge() {
 
 var enlargeThings = document.getElementById("choice-large");
 enlargeThings.addEventListener('click', makeItLarge);
+
 var userMesssageMain = document.getElementById("input-message");
 userMesssageMain.addEventListener('keydown',function(e){
 	if(13 == e.keyCode){
