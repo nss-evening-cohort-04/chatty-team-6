@@ -21,10 +21,19 @@ userMesssageMain.addEventListener('keydown',function(e){
 	if(13 == e.keyCode){
 		Chatty.storeMessage();
 		Chatty.printMessages();
+		userMesssageMain.value = "";
 	}
 });
 
+function clearMessage(){
+	var everythingNew = document.getElementById("printed-message");
+	var everythingOld = document.getElementById("previous-message");
+	everythingNew.innerHTML = "";
+	everythingOld.innerHTML = "";
+}
 
+var deleteAll = document.getElementById('clear-message');
+deleteAll.addEventListener('click', clearMessage);
 
 
 
