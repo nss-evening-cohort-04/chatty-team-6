@@ -28,7 +28,7 @@ var Chatty = (function(addChatty)
 			currentMessage = messageArray[i].message;
 			newMessages += `<div id='message-${[i]}'>`;
 	    	newMessages += `<p>${currentMessage}</p>`;
-	    	newMessages += "<button id='deleteBtn' type='button'>Delete</button><br/>";
+	    	newMessages += "<button id='deleteBtn' type='button' class='btn'>Delete</button><br/>";
 	    	newMessages +="</div>";
 		}
 		printTo.innerHTML =  newMessages;	
