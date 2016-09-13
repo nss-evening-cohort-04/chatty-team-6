@@ -16,5 +16,15 @@ function makeItLarge() {
 
 var enlargeThings = document.getElementById("choice-large");
 enlargeThings.addEventListener('click', makeItLarge);
+var userMesssageMain = document.getElementById("input-message");
+userMesssageMain.addEventListener('keydown',function(e){
+	if(13 == e.keyCode){
+		Chatty.storeMessage();
+		Chatty.printMessages();
+	}
+});
+
+
+
 
 
