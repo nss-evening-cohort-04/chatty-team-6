@@ -1,13 +1,18 @@
 {
- 	"messageGroup": [{
-		"message": "I am Message Number One."
-	}, {
-		"message": "I am Message Number Two."
-	}, {
-		"message": "I am Message Number Three."
-	}, {
-		"message": "I am Message Number Four."
-	}, {
-		"message": "I am Message Number Five."
-	}]
+    "messageGroup": [{
+        "message": "I will meet you for lunch",
+        "time": "Tue Sep 13 2015 09:09:17 GMT-0500 (CDT)"
+    }, {
+        "message": "What time was it again?",
+        "time": "Tue Sep 13 2015 09:26:19 GMT-0500 (CDT)"
+    }, {
+        "message": "oh, I love that place!!",
+        "time": "Tue Sep 13 2015 09:52:33 GMT-0500 (CDT)"
+    }, {
+        "message": "It's my treat ...",
+        "time": "Tue Sep 13 2015 10:06:09 GMT-0500 (CDT)"
+    }, {
+        "message": "I'm running late, be there in 5",
+        "time": "Tue Sep 13 2015 11:57:45 GMT-0500 (CDT)"
+    }]
 }
