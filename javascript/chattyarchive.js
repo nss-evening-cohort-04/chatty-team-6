@@ -16,17 +16,19 @@ var Chatty = (function(){
 		var data = JSON.parse(this.responseText);
 		console.log("messageData", data);
 		var messageData = "";
-		
 		var currentMessage;
 		data.messageGroup.reverse();
 
 	for (var i = 0; i < data.messageGroup.length; i++) {
 	    currentMessage = data.messageGroup[i].message;
+	    currentTime = data.messageGroup[i].time;
 	    //below is ES6 notation
 	    //can be written "<h1>"+currentSong.title
 	    messageData += `<div id='old-message-${[i]}'>`;
 	    	messageData += `<p>${currentMessage}</p>`;
-	    	messageData += "<button id='deleteBtn' type='button' class='btn'>Delete</button><br/>";
+	    	messageData += `<p class="tiny">${currentTime}</p>`;
+	    	messageData += "<button id='deleteBtn' type='button'>Delete</button><br/>";
+
 	    messageData +="</div>";
 
 	 };
