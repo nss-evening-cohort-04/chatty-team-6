@@ -23,11 +23,15 @@ var Chatty = (function(addChatty)
 	addChatty.printMessages = function(){
 		var newMessages = "";
 		var currentMessage ="";
+		var timeStampMil = Date.now();
+    	var date = new Date(timeStampMil);
+    	date.toString();
 
 		for(var i =0; i < messageArray.length; i++){
 			currentMessage = messageArray[i].message;
 			newMessages += `<div id='message-${[i]}'>`;
 	    	newMessages += `<p>${currentMessage}</p>`;
+	    	newMessages += `<p class="tiny">time written: ${date}</p>`;
 	    	newMessages += "<button id='deleteBtn' type='button'>Delete</button><br/>";
 	    	newMessages +="</div>";
 		}

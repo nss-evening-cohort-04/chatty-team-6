@@ -25,15 +25,19 @@ userMesssageMain.addEventListener('keydown',function(e){
 	}
 });
 
+//if have time, make clear btn disable when individual deleted clicked.
 function clearMessage(){
 	var everythingNew = document.getElementById("printed-message");
 	var everythingOld = document.getElementById("previous-message");
 	everythingNew.innerHTML = "";
 	everythingOld.innerHTML = "";
-}
+	document.getElementById("clear-message").setAttribute("disabled", true);
+};
 
 var deleteAll = document.getElementById('clear-message');
 deleteAll.addEventListener('click', clearMessage);
+
+
 
 
 

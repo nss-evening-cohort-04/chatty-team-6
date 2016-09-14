@@ -22,10 +22,12 @@ var Chatty = (function(){
 
 	for (var i = 0; i < data.messageGroup.length; i++) {
 	    currentMessage = data.messageGroup[i].message;
+	    currentTime = data.messageGroup[i].time;
 	    //below is ES6 notation
 	    //can be written "<h1>"+currentSong.title
 	    messageData += `<div id='old-message-${[i]}'>`;
 	    	messageData += `<p>${currentMessage}</p>`;
+	    	messageData += `<p class="tiny">${currentTime}</p>`;
 	    	messageData += "<button id='deleteBtn' type='button'>Delete</button><br/>";
 	    messageData +="</div>";
 
