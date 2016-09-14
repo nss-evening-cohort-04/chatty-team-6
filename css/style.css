@@ -5,12 +5,23 @@ body {
   color: #ff4f00;
 }
 
+.navbar-default {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+  color: #ff4f00;
+ }
+
+
 .navbar-header {
 	font-family: 'Arvo', serif;
 }
 
-.input-message {
-
+#input-message {
+margin-top: 80px;
 }
 
 #printed-message {
@@ -58,7 +69,7 @@ margin: 20px 5px 0px 5px;
 }
 
 .dark {
-  background: darkslategray;
+  background: #007BC3;
   color: white;
 }
 
