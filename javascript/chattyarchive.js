@@ -27,8 +27,7 @@ var Chatty = (function(){
 	    messageData += `<div id='old-message-${[i]}'>`;
 	    	messageData += `<p>${currentMessage}</p>`;
 	    	messageData += `<p class="tiny">${currentTime}</p>`;
-	    	messageData += "<button id='deleteBtn' type='button'>Delete</button><br/>";
-
+	    	messageData += "<button id='deleteBtn' type='button'>Delete</button><button id='edit'>Edit</button><br/>";
 	    messageData +="</div>";
 
 	 };
