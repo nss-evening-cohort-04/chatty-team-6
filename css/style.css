@@ -14,8 +14,7 @@ body {
   border-top: 0;
   color: #ff4f00;
  }
-
-
+ 
 .navbar-header {
 	font-family: 'Arvo', serif;
 }
@@ -48,7 +47,7 @@ margin-top: 80px;
 }
 
 .btn:hover, #clear-message:hover {
-background: #f29468;
+  background: #f29468;
   background-image: -webkit-linear-gradient(top, #f29468, #f29468);
   background-image: -moz-linear-gradient(top, #f29468, #f29468);
   background-image: -ms-linear-gradient(top, #f29468, #f29468);
@@ -64,8 +63,7 @@ background: #f29468;
 }
 
 #choice-dark, #choice-large {
-margin: 20px 5px 0px 5px;
-
+  margin: 20px 5px 0px 5px;
 }
 
 .dark {
@@ -73,15 +71,11 @@ margin: 20px 5px 0px 5px;
   color: white;
 }
 
-/*.grey {
-	color: black !important;
-}*/
-
 .large {
   font-size: 2em;
 }
+
 .tiny{
 	font-size: 11px;
 	color: gray;
-
 }
