@@ -16,7 +16,6 @@ var Chatty = (function(){
 		var data = JSON.parse(this.responseText);
 		console.log("messageData", data);
 		var messageData = "";
-		
 		var currentMessage;
 		data.messageGroup.reverse();
 

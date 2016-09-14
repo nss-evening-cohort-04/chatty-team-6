@@ -12,26 +12,24 @@ var Chatty = (function(addChatty)
 {
 	
 	var messageArray = [];
-
-	addChatty.storeMessage = function(){
+	var currentMessage ="";
+	addChatty.storeMessage = function(time){
 		//this method will push 
 		//the user message into the array
 		var userMessage = document.getElementById("input-message").value;
-		messageArray.unshift({"message":userMessage});	
+		messageArray.unshift({"message":userMessage,"time":time});	
 	};
 
 	addChatty.printMessages = function(){
 		var newMessages = "";
-		var currentMessage ="";
-		var timeStampMil = Date.now();
-    	var date = new Date(timeStampMil);
-    	date.toString();
+		
 
 		for(var i =0; i < messageArray.length; i++){
 			currentMessage = messageArray[i].message;
+			currentTime = messageArray[i].time;
 			newMessages += `<div id='message-${[i]}'>`;
 	    	newMessages += `<p>${currentMessage}</p>`;
-	    	newMessages += `<p class="tiny">time written: ${date}</p>`;
+	    	newMessages += `<p class="tiny">time written: ${currentTime}</p>`;
 	    	newMessages += "<button id='deleteBtn' type='button'>Delete</button><br/>";
 	    	newMessages +="</div>";
 		}

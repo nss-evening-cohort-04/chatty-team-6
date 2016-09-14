@@ -19,7 +19,11 @@ enlargeThings.addEventListener('click', makeItLarge);
 var userMesssageMain = document.getElementById("input-message");
 userMesssageMain.addEventListener('keydown',function(e){
 	if(13 == e.keyCode){
-		Chatty.storeMessage();
+
+		var timeStampMil = Date.now();
+    	var date = new Date(timeStampMil);
+    	date.toString();
+		Chatty.storeMessage(date);
 		Chatty.printMessages();
 		userMesssageMain.value = "";
 	}

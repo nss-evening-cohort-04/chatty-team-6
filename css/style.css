@@ -11,3 +11,8 @@ body {
 .large {
   font-size: 2em;
 }
+.tiny{
+	font-size: 11px;
+	color: gray;
+
+}
