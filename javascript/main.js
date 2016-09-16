@@ -32,6 +32,13 @@ function clearMessage(){
 	everythingOld.innerHTML = "";
 }
 
+function editMessage(){
+	var editInputMessage = document.getElementById('edit-this').innerHTML;
+	var inputMessage = document.getElementById('input-message').value;
+	inputMessage = editInputMessage;
+};
+
+
 var deleteAll = document.getElementById('clear-message');
 deleteAll.addEventListener('click', clearMessage);
 
