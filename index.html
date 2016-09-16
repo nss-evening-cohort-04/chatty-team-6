@@ -2,12 +2,48 @@
 <html>
 <head>
   <title>Chatty App Group 6</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans+Condensed:300,300i,700" rel="stylesheet">
 </head>
 <body>
-  <header> Nav Bar </header>
-
-  <input type="text" name="" value="" placeholder="" id="input-message"></input>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/images/chatty-logo.png"><img src="/images/chatty-logo.png" alt="Chatty Logo" width="80" height="28"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+        </li>
+        <li> <input type="checkbox" name="" value="DarkTheme" id="choice-dark" class="grey">Dark Theme</li>
+        <li><input type="checkbox" name="" value="LargeText" id="choice-large" class="grey">Large Text</li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Search Messages</button>
+      </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+  <input type="text" class="form-control input-lg value="" placeholder="" id="input-message"></input>
 
   <button type="" id="clear-message">Clear Message</button>
 
@@ -21,17 +57,6 @@
   <script type="text/javascript" src="javascript/chattyaddmessage.js"></script>
   <script type="text/javascript" src="javascript/chattyremovemessage.js"></script>
   <script src="/javascript/main.js" type="text/javascript" charset="utf-8" async defer></script>
-
-
-    <div id="printed-message"></div>
-      <div id="previous-message"></div>
-        <script type="text/javascript" src="javascript/chattyarchive.js"></script>
-        <script type="text/javascript" src="javascript/chattyaddmessage.js"></script>
-        <script type="text/javascript" src="javascript/chattyremovemessage.js"></script>
-        <script src="/javascript/main.js" type="text/javascript" charset="utf-8" async defer></script>
-      </div>
-  </div>  
-</div>
 
 </body>
 </html>
