@@ -23,7 +23,7 @@ var Chatty = (function(addChatty)
 	addChatty.printMessages = function(){
 		var newMessages = "";
 		
-
+		console.log(messageArray);
 		for(var i =0; i < messageArray.length; i++){
 			currentMessage = messageArray[i].message;
 			currentTime = messageArray[i].time;
@@ -33,13 +33,37 @@ var Chatty = (function(addChatty)
 	    	newMessages += "<button id='deleteBtn' type='button' class='btn'>Delete</button><button id='edit' class='btn'>Edit</button><br/>";
 	    	newMessages +="</div>";
 		}
+
 		printTo.innerHTML =  newMessages;	
 	};
 
-	 printTo.addEventListener("click",function(e){
+
+	printTo.addEventListener("click",function(e){
+	 	
 	 	console.log("target",e.target);
 	 	Chatty.removeMessage(e.target);
+	 	Chatty.removeIndividualMessage(e.target.id);
+	 	
+	 	// if(target.id === "edit"){
+	 	// 		console.log("target",e.target);
+	 	// 		Chatty.editMessage(e.target);
+	 	// 	}
 	 });
+
+	addChatty.clearMessageArray = function(){
+		messageArray = [];
+	};
+	addChatty.removeIndividualMessage = function(id){
+		if(id === "deleteBtn"){
+		var element = document.getElementById(id);
+		console.log(element);
+		var index = messageArray.indexOf(element.parentNode.childNodes[0].innerText);
+		console.log(element.parentNode.childNodes[0].innerText);
+		console.log(index);
+		messageArray.splice(index, 1);
+		}
+	};
+
 
 return addChatty;
 })(Chatty || {});

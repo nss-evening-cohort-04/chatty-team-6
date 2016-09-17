@@ -39,8 +39,17 @@ function clearMessage(){
 	var everythingOld = document.getElementById("previous-message");
 	everythingNew.innerHTML = "";
 	everythingOld.innerHTML = "";
-	document.getElementById("clear-message").setAttribute("disabled", true);
+	Chatty.clearMessageArray();
+	// document.getElementById("clear-message").setAttribute("disabled", true);
 };
+
+// function activateClear(){
+// 	if(document.getElementById("printed-message") != null){
+// 		document.getElementById("clear-message").setAttribute("disabled", false);
+// 	}else if(document.getElementById("previous-message") != null){
+// 		document.getElementById("clear-message").setAttribute("disabled", false);
+// 	}
+// }
 
 var deleteAll = document.getElementById('clear-message');
 deleteAll.addEventListener('click', clearMessage);
