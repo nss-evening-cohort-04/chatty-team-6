@@ -10,7 +10,21 @@ function makeItDark() {
 var darkenThings = document.getElementById("choice-dark");
 darkenThings.addEventListener('click', makeItDark);
 
+var printTo = document.getElementById("printed-message");
+	printTo.addEventListener("click",function(e){
+	 	
+	 	console.log("target",e.target);
+	 	Chatty.removeMessage(e.target);
+	 	Chatty.removeIndividualMessage(e.target.id);
+	 	if(e.target.parentNode.parentNode.id === "previous-message"){
+	 		Chatty.archiveremoveMessage(e.target);
 
+	 	};
+	 	// if(target.id === "edit"){
+	 	// 		console.log("target",e.target);
+	 	// 		Chatty.editMessage(e.target);
+	 	// 	}
+	 });
 // function to make large
 
 function makeItLarge() {

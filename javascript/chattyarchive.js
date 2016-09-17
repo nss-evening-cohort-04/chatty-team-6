@@ -26,8 +26,8 @@ var Chatty = (function(){
 	    messageData += `<div id='old-message-${[i]}'>`;
 	    	messageData += `<p>${currentMessage}</p>`;
 	    	messageData += `<p class="tiny">${currentTime}</p>`;
-	    	messageData += "<button id='deleteBtn' type='button' class='btn'>Delete</button><button id='edit' class='btn'>Edit</button><br/>";
-	    messageData +="</div>";
+	    	messageData += `<button id='deleteBtn-${i}' type='button' class='btn'>Delete</button><br/>`;
+	    messageData +=`</div>`;
 
 	 };
 
@@ -37,6 +37,7 @@ var Chatty = (function(){
 	 messageDiv.addEventListener("click",function(e){
 	 	console.log("target",e.target);
 	 	Chatty.removeMessage(e.target);
+	 	Chatty.archiveremoveMessage(e.target);
 	 });
 
 	
@@ -49,5 +50,17 @@ var Chatty = (function(){
 	myRequest.addEventListener("progress", executeThisCodeWhenChunksArrive)
 	myRequest.open("GET", "loadmessages.json")
 	myRequest.send();
+
+	return {
+
+		archiveremoveMessage : function(target){
+			for(var i = 0; i < 5; i++){
+				if (target.id ===( 'deleteBtn-${i}')){
+					console.log(target.parentNode);
+					target.parentNode.parentNode.removeChild(target.parentNode);
+				}
+			}
+		}
+	};
 
 })();
