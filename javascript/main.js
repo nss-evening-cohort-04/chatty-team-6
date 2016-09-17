@@ -66,7 +66,7 @@ function clearMessage(){
 // }
 
 var deleteAll = document.getElementById('clear-message');
-deleteAll.addEventListener('click', clearMessage);
+deleteAll.addEventListener('click',clearMessage);
 
 
 

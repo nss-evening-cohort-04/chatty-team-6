@@ -60,6 +60,7 @@ var Chatty = (function(addChatty)
 			console.log('parentNode:',target.parentNode);
 			//if (target.id ===( `deleteBtn-${i}`)){
 				target.parentNode.parentNode.removeChild(target.parentNode);
+				Chatty.removeIndividualMessage(target.id);
 			//}
 		//}
 	};
