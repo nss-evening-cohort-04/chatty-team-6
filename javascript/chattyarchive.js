@@ -38,6 +38,8 @@ var Chatty = (function(){
 	 	console.log("target",e.target);
 	 	Chatty.removeMessage(e.target);
 	 	Chatty.archiveremoveMessage(e.target);
+	 	Chatty.removeIndividualMessage(e.target.id);
+
 	 });
 
 	
