@@ -7,7 +7,7 @@
 // individual messages.  
 // Messages should be stored in 
 // private array.
-var printTo = document.getElementById("printed-message");
+
 var Chatty = (function(addChatty)
 {
 	
@@ -30,40 +30,38 @@ var Chatty = (function(addChatty)
 			newMessages += `<div id='message-${[i]}'>`;
 	    	newMessages += `<p>${currentMessage}</p>`;
 	    	newMessages += `<p class="tiny">time written: ${currentTime}</p>`;
-	    	newMessages += "<button id='deleteBtn-${[i]}' type='button' class='btn'>Delete</button><button id='edit-${[i]}' class='btn'>Edit</button><br/>";
-	    	newMessages +="</div>";
+	    	newMessages += `<button id="deleteBtn-${i}" type='button' class='btn'>Delete</button><br/>`;
+	    	newMessages +=`</div>`;
 		}
 
 		printTo.innerHTML =  newMessages;	
 	};
 
 
-	printTo.addEventListener("click",function(e){
-	 	
-	 	console.log("target",e.target);
-	 	Chatty.removeMessage(e.target);
-	 	Chatty.removeIndividualMessage(e.target.id);
-	 	
-	 	// if(target.id === "edit"){
-	 	// 		console.log("target",e.target);
-	 	// 		Chatty.editMessage(e.target);
-	 	// 	}
-	 });
 
 	addChatty.clearMessageArray = function(){
 		messageArray = [];
 	};
 	addChatty.removeIndividualMessage = function(id){
-		if(id === "deleteBtn"){
-		var element = document.getElementById(id);
-		console.log(element);
-		var index = messageArray.indexOf(element.parentNode.childNodes[0].innerText);
-		console.log(element.parentNode.childNodes[0].innerText);
-		console.log(index);
-		messageArray.splice(index, 1);
+		for(var i = 0; i < messageArray.length; i++){
+			if(id === `deleteBtn-${i}`){
+			var element = document.getElementById(id);
+			console.log(element);
+			var index = messageArray.indexOf(element.parentNode.childNodes[0].innerText);
+			console.log(element.parentNode.childNodes[0].innerText);
+			console.log(index);
+			messageArray.splice(index, 1);
+			}
 		}
+	}
+	addChatty.removeMessage = function(target){
+		console.log('target',target);
+		//for(var i = 0; i < messageArray.length; i++){
+			console.log('parentNode:',target.parentNode);
+			//if (target.id ===( `deleteBtn-${i}`)){
+				target.parentNode.parentNode.removeChild(target.parentNode);
+			//}
+		//}
 	};
-
-
-return addChatty;
+	return addChatty;
 })(Chatty || {});
