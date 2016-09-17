@@ -1,8 +1,8 @@
-// IIFE to load JSON File 
+/ IIFE to load JSON File 
 // and return array of objects
 
 var Chatty = (function(){
-	// return{
+
 	
 	function executeThisCodeIfXHRFails () {
 	  console.log("An error occurred while transferring");
@@ -14,7 +14,6 @@ var Chatty = (function(){
 
 	function executeThisCodeAfterFileLoaded () {
 		var data = JSON.parse(this.responseText);
-		console.log("messageData", data);
 		var messageData = "";
 		var currentMessage;
 		data.messageGroup.reverse();
@@ -32,7 +31,6 @@ var Chatty = (function(){
 
 	 };
 
-	  console.log(messageData);
 	  messageDiv.innerHTML = messageData;
 	}
 
@@ -51,5 +49,5 @@ var Chatty = (function(){
 	myRequest.addEventListener("progress", executeThisCodeWhenChunksArrive)
 	myRequest.open("GET", "loadmessages.json")
 	myRequest.send();
-// }
+
 })();
