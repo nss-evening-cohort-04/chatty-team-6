@@ -30,7 +30,7 @@ var Chatty = (function(addChatty)
 			newMessages += `<div id='message-${[i]}'>`;
 	    	newMessages += `<p>${currentMessage}</p>`;
 	    	newMessages += `<p class="tiny">time written: ${currentTime}</p>`;
-	    	newMessages += "<button id='deleteBtn' type='button' class='btn'>Delete</button><button id='edit' class='btn'>Edit</button><br/>";
+	    	newMessages += "<button id='deleteBtn-${[i]}' type='button' class='btn'>Delete</button><button id='edit-${[i]}' class='btn'>Edit</button><br/>";
 	    	newMessages +="</div>";
 		}
 
