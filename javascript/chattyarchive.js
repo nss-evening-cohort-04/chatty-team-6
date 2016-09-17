@@ -1,4 +1,4 @@
-/ IIFE to load JSON File 
+// IIFE to load JSON File 
 // and return array of objects
 
 var Chatty = (function(){
