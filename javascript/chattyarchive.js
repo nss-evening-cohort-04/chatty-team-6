@@ -14,7 +14,7 @@ var Chatty = (function(){
 
 	function executeThisCodeAfterFileLoaded () {
 		var data = JSON.parse(this.responseText);
-		console.log("messageData", data);
+		//console.log("messageData", data);
 		var messageData = "";
 		var currentMessage;
 		data.messageGroup.reverse();
@@ -32,7 +32,7 @@ var Chatty = (function(){
 
 	 };
 
-	  console.log(messageData);
+	  //console.log(messageData);
 	  messageDiv.innerHTML = messageData;
 	}
 

@@ -1,8 +1,6 @@
 var mainElement = document.getElementsByTagName("body");
 
-// //document.getElementById("printed-message").addEventListener("click", function(){
-// 	console.log("printed-message");
-// });
+
 
 function makeItDark() {
   mainElement[0].classList.toggle("dark");
